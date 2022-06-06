@@ -65,6 +65,6 @@ echo '
 }
 ' | sudo tee /etc/amazon-cloudwatch-agent.json > /dev/null
 
-sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
-    -a fetch-config -m ec2 -s \
-    -c file:/etc/amazon-cloudwatch-agent.json
+# sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
+#     -a fetch-config -m ec2 -s \
+#     -c file:/etc/amazon-cloudwatch-agent.json

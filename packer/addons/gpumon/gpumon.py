@@ -19,13 +19,13 @@ from datetime import datetime
 from time import sleep
 
 ### CHOOSE REGION ####
-EC2_REGION = 'us-east-1'
+EC2_REGION = 'eu-west-1'
 
 ###CHOOSE NAMESPACE PARMETERS HERE###
 my_NameSpace = 'GPU'
 
 ### CHOOSE PUSH INTERVAL ####
-sleep_interval = 10
+sleep_interval = 20
 
 ### CHOOSE STORAGE RESOLUTION (BETWEEN 1-60) ####
 store_reso = 60

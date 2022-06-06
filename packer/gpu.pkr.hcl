@@ -13,15 +13,17 @@ locals {
 
 source "amazon-ebs" "gpu" {
   ami_name      = "packer-gpu-ami-${local.version}"
+  ami_description = "Amazon Linux AMI 2.0 x86_64 ECS HVM GP2 with GPUmon by Geneea"
   instance_type = "g4dn.xlarge"
-  region        = "us-east-1"
-  source_ami    = "ami-03b8356d5548f848e" # Amazon Linux 2 AMI with NVIDIA TESLA GPU Driver
+  region        = "eu-west-1"
+  # aws ssm get-parameter --name /aws/service/ecs/optimized-ami/amazon-linux-2/gpu/recommended --region eu-west-1 --output json
+  source_ami    = "ami-04c4462f523b537ad"
   ssh_username  = "ec2-user"
 
   launch_block_device_mappings {
     device_name           = "/dev/xvda"
     delete_on_termination = true
-    volume_size           = 20
+    volume_size           = 30
     volume_type           = "gp2"
     encrypted             = true
   }
