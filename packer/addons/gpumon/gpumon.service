@@ -9,7 +9,7 @@ Type=simple
 Restart=always
 RestartSec=10
 User=root
-ExecStart=/usr/bin/env python -u /etc/gpumon.py
+ExecStart=/usr/bin/env python3 -u /etc/gpumon.py
 
 [Install]
 WantedBy=multi-user.target
